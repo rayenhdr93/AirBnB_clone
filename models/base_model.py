@@ -3,6 +3,7 @@
 from uuid import uuid4
 import uuid
 from datetime import datetime
+from datetime import date
 
 
 class BaseModel:
@@ -23,4 +24,8 @@ class BaseModel:
         self.updated_at = datetime.now()
 
     def to_dict(self):
-        return self.__dict__
+        new = self.__dict__.copy()
+        new['created_at'] = datetime.now().isoformat("T")
+        new['updated_at'] = datetime.now().isoformat("T")
+        new['__class__'] = type(self).__name__
+        return new
