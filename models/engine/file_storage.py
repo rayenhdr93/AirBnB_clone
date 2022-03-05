@@ -27,7 +27,7 @@ class FileStorage:
             with open(self.__file_path, "r", encoding="UTF-8") as f:
                 obj = json.load(f)
             for key, value in obj.items():
-                class_name = key.split(',')[0]
+                class_name = key.split('.')[0]
                 self.__objects[key] = eval(class_name)(**value) 
         except BaseException:
             pass
