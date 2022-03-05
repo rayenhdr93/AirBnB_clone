@@ -6,8 +6,11 @@ from datetime import datetime
 
 class BaseModel:
     '''BaseModel'''
+
+
     def __init__(self, *args, **kwargs):
         '''__init__'''
+
         if kwargs:
             for key, value in kwargs.items():
                 if key == 'created_at' or key == 'updated_at':
@@ -29,6 +32,7 @@ class BaseModel:
         self.updated_at = datetime.now()
 
     def to_dict(self):
+        '''dict'''
         new = self.__dict__.copy()
         new['created_at'] = datetime.now().isoformat("T")
         new['updated_at'] = datetime.now().isoformat("T")
