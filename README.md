@@ -15,7 +15,7 @@ test
 
 
 ### How to use our Airbnb clone<br/>
-
+```
 root@user:/AirBnB_clone$ ./console.py<br/>
 (hbnb)help<br/>
 
@@ -34,7 +34,7 @@ Quit command to exit the program<br/>
 (hbnb)<br/>
 (hbnb) quit<br/>
 root@user:/AirBnB_clone$<br/>
-
+```
 ### Known bugs :
 
 No bugs know. if there is a bug you can contact us in email.
