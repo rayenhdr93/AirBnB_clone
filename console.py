@@ -28,6 +28,10 @@ class HBNBCommand(cmd.Cmd):
             new_ins = BaseModel()
             new_ins.save()
             print(new_ins.id)
+        elif line == "User":
+            new_ins = User()
+            new_ins.save()
+            print(new_ins.id)
         else:
             print("** class doesn't exist **")
 
@@ -37,7 +41,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
         else:
 
-            if list[0] not in ("BaseModel"):
+            if list[0] not in ("BaseModel", "User"):
                 print("** class doesn't exist **")
             elif len(list) < 2:
                 print("** instance id missing **")
@@ -53,7 +57,7 @@ class HBNBCommand(cmd.Cmd):
         if len(line) == 0:
             print("** class name missing **")
         else:
-            if list[0] not in ("BaseModel"):
+            if list[0] not in ("BaseModel", "User"):
                 print("** class doesn't exist **")
             elif len(list) < 2:
                 print("** instance id missing **")
