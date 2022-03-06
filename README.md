@@ -1,11 +1,11 @@
 # **`Airbnb Clone`**
 
 #### Description of Airbnb Clone
->This Is A clone of Airbnb<br/>
->in this repository you can find A command interpreter and classes and methods<br/>
->exemple class(BaseModel) and methods(State, City, Place, Review ...)<br/>
->The Console is command interpreter like the Shell project in C<br/>
->Currently, the project simply implements the back-end console<br/>
+* This Is A clone of Airbnb<br/>
+* in this repository you can find A command interpreter and classes and methods<br/>
+exemple class(BaseModel) and methods(State, City, Place, Review ...)<br/>
+* The Console is command interpreter like the Shell project in C<br/>
+* Currently, the project simply implements the back-end console<br/>
 ### This is the supported commands in Airbnb Clone<br/>
 test
 
