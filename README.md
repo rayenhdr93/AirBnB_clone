@@ -14,7 +14,7 @@
 
 
 
-###How to use our Airbnb clone
+###How to use our Airbnb clone<br/>
 root@user:/AirBnB_clone$ ./console.py<br/>
 (hbnb)help<br/>
 
@@ -28,7 +28,7 @@ EOF  help  quit<br/>
 Quit command to exit the program<br/>
 
 (hbnb)<br/>
-(hbnb)help EOF<br/>
+(hbnb) help EOF<br/>
 Quit command to exit the program<br/>
 (hbnb)<br/>
 (hbnb) quit<br/>
