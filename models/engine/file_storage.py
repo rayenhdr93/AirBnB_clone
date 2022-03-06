@@ -5,7 +5,7 @@ from models.base_model import BaseModel
 
 class FileStorage:
     '''FileStorage'''
-    __file_path = 'objects.json'
+    __file_path = 'file.json'
     __objects = {}
     def all(self):
         return (self.__objects)
