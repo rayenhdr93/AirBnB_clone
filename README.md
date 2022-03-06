@@ -18,24 +18,24 @@ test
 
 ### How to use our Airbnb clone:<br/>
 ```
-root@user:/AirBnB_clone$ ./console.py <br/>
-(hbnb)help<br/>
+root@user:/AirBnB_clone$ ./console.py
+(hbnb)help
 
-Documented commands (type help <topic>):<br/>
+Documented commands (type help <topic>):
 
-========================================<br/>
-EOF  help  quit<br/>
+========================================
+EOF  help  quit
 
-(hbnb)<br/>
-(hbnb) help quit<br/>
-Quit command to exit the program<br/>
+(hbnb)
+(hbnb) help quit
+Quit command to exit the program
 
-(hbnb)<br/>
-(hbnb) help EOF<br/>
-Quit command to exit the program<br/>
-(hbnb)<br/>
-(hbnb) quit<br/>
-root@user:/AirBnB_clone$<br/>
+(hbnb)
+(hbnb) help EOF
+Quit command to exit the program
+(hbnb)
+(hbnb) quit
+root@user:/AirBnB_clone$
 ```
 ### Known bugs :
 
