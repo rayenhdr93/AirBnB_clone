@@ -5,6 +5,7 @@ from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 from models import storage
 
+
 class HBNBCommand(cmd.Cmd):
     """class HBNBCommand"""
     prompt = "(hbnb) "
@@ -34,35 +35,35 @@ class HBNBCommand(cmd.Cmd):
         list = line.split(" ")
         if len(line) == 0:
             print("** class name missing **")
-        else :
-            if list[0] not in("BaseModel"):
+        else:
+
+            if list[0] not in ("BaseModel"):
                 print("** class doesn't exist **")
             elif len(list) < 2:
                 print("** instance id missing **")
-            else :
+            else:
                 ids = storage.all()
-                if (list[0]+ "." + list[1]) in ids.keys():
-                    print(ids[list[0]+ "." + list[1]])
+                if (list[0] + "." + list[1]) in ids.keys():
+                    print(ids[list[0] + "." + list[1]])
                 else:
                     print("** no instance found **")
-        
+
     def do_destroy(self, line):
         list = line.split(" ")
         if len(line) == 0:
             print("** class name missing **")
-        else :
-            if list[0] not in("BaseModel"):
+        else:
+            if list[0] not in ("BaseModel"):
                 print("** class doesn't exist **")
             elif len(list) < 2:
                 print("** instance id missing **")
-            else :
+            else:
                 ids = storage.all()
-                if ids[list[0]+ "." + list[1]]:
-                    del(ids[list[0]+ "." + list[1]])
+                if ids[list[0] + "." + list[1]]:
+                    del(ids[list[0] + "." + list[1]])
                     storage.save()
                 else:
                     print("** no instance found **")
-    
 
 
 if __name__ == '__main__':
