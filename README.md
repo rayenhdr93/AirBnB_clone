@@ -18,7 +18,7 @@ test
 
 ### How to use our Airbnb clone:<br/>
 ```
-root@user:/AirBnB_clone$ ./console.py<br/>
+root@user:/AirBnB_clone$ ./console.py <br/>
 (hbnb)help<br/>
 
 Documented commands (type help <topic>):<br/>
