@@ -35,7 +35,7 @@ class HBNBCommand(cmd.Cmd):
         if len(line) == 0:
             print("** class name missing **")
         else :
-            if list[0] not in("BaseModel", "FileStorage"):
+            if list[0] not in("BaseModel"):
                 print("** class doesn't exist **")
             elif len(list) < 2:
                 print("** instance id missing **")
@@ -51,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
         if len(line) == 0:
             print("** class name missing **")
         else :
-            if list[0] not in("BaseModel", "FileStorage"):
+            if list[0] not in("BaseModel"):
                 print("** class doesn't exist **")
             elif len(list) < 2:
                 print("** instance id missing **")
