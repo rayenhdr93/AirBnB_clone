@@ -117,14 +117,6 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print("** no instance found **")
 
-    def do_count(self, line):
-        list = line.split()
-        counter = 0
-        for key, value in models.storage.all().items():
-            if key.split(".")[0] == list[0]:
-                counter += 1
-        print(counter)
-
     def do_quit(self, line):
         return True
 
@@ -136,34 +128,6 @@ class HBNBCommand(cmd.Cmd):
 
     def help_EOF(self):
         print("Quit command to exit the program\n")
-
-    def default(self, line):
-        list = line.split(".")
-        if len(list) > 1 and list[0] in classes:
-            print("hello")
-            if list[1] == "all()":
-                return self.do_all(list[0])
-            elif list[1] == "count()":
-                return self.do_count(list[0])
-            else:
-                replace_list = list[1].replace(
-                    "(", " ").replace(
-                    ")", "").replace(
-                    ",", "")
-                new_list = replace_list.split()
-                Cname_id = "{} {}".format(list[0], new_list[1])
-                print(Cname_id)
-                print(len(new_list))
-                print(new_list)
-                if new_list[0] == "show":
-                    return self.do_show(Cname_id)
-                elif new_list[0] == "destroy":
-                    return self.do_destroy(Cname_id)
-                elif new_list[0] == "update":
-                    if len(new_list) == 4:
-                        Cname_id += " " + new_list[2] + " " + new_list[3]
-                        return self.do_update(Cname_id)
-
-
+    
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
