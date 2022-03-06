@@ -1,6 +1,6 @@
 # ****Airbnb Clone****
 
-This project challenged us to Create our own Simple shell
+This project challenged us to Create our own Airbnb Console
 
 ### Description of Airbnb Clone
 * This Is A clone of Airbnb<br/>
