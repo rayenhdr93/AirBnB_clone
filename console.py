@@ -128,6 +128,7 @@ class HBNBCommand(cmd.Cmd):
 
     def help_EOF(self):
         print("Quit command to exit the program\n")
-    
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
