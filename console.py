@@ -29,6 +29,18 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         pass
 
+    def do_quit(self, line):
+        return True
+
+    def help_quit(self):
+        print("Quit command to exit the program\n")
+
+    def do_EOF(self, line):
+        return True
+
+    def help_EOF(self):
+        print("Quit command to exit the program\n")
+ 
     def do_create(self, line):
         list = line.split()
         if len(list) == 0:
@@ -85,49 +97,6 @@ class HBNBCommand(cmd.Cmd):
                 elif len(list) == 0:
                     string_list.append(value.__str__())
             print(string_list)
-
-    def do_update(self, line):
-        models.storage.reload()
-        list = line.split()
-        if len(list) == 0:
-            print("** class name missing **")
-        else:
-            if list[0] not in classes:
-                print("** class doesn't exist **")
-            elif list[0] in classes:
-                if len(list) == 1:
-                    print("** instance id missing **")
-                    return False
-                key = "{}.{}".format(list[0], list[1])
-                if key in models.storage.all():
-                    dict_to_update = models.storage.all()[key].__dict__
-                    if len(list) == 2:
-                        print("** attribute name missing **")
-                    elif len(list) == 3:
-                        print("** value missing **")
-                    else:
-                        k = list[2]
-                        try:
-                            attrtype = type(dict_to_update[k])
-                            v = attrtype(list[3])
-                        except KeyError:
-                            v = list[3]
-                        dict_to_update[k] = v
-                        models.storage.save()
-                else:
-                    print("** no instance found **")
-
-    def do_quit(self, line):
-        return True
-
-    def help_quit(self):
-        print("Quit command to exit the program\n")
-
-    def do_EOF(self, line):
-        return True
-
-    def help_EOF(self):
-        print("Quit command to exit the program\n")
 
 
 if __name__ == '__main__':
