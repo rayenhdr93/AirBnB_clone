@@ -6,4 +6,7 @@ header {
         top: 0;
         border-color:#CCCCCC; 
         border-bottom: 1px solid;
+        background-image: url("../images/logo.png");
+        background-position: 20px ;
+        background-repeat: no-repeat;
     }
